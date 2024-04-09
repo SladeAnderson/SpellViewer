@@ -22,11 +22,13 @@ namespace SpellViewer.Controllers
     {
         private readonly SpellViewerContext dbContext;
         private readonly IMasterSpellsRepo masterSpellsRepo;
+        private readonly IJsonTools jsonTools;
 
-        public MasterSpellsController(SpellViewerContext dbContext, IMasterSpellsRepo masterSpellsRepo)
+        public MasterSpellsController(SpellViewerContext dbContext, IMasterSpellsRepo masterSpellsRepo, IJsonTools jsonTools)
         {
             this.dbContext = dbContext;
             this.masterSpellsRepo = masterSpellsRepo;
+            this.jsonTools = jsonTools;
         }
 
         // create

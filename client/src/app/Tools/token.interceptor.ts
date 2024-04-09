@@ -7,7 +7,7 @@ import {
 } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { AuthService } from "../Services/authorize.service";
-@Injectable()
+@Injectable({providedIn: "root"})
 export class TokenInterceptor implements HttpInterceptor {
     constructor(public auth: AuthService) {}
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

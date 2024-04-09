@@ -1,0 +1,19 @@
+#tabPanel{
+    border-width: 5px;
+    height: 10vh;
+    color: white;
+    border-bottom-style: none !important; 
+    box-shadow: none !important;
+}
+
+:host ::ng-deep .mat-mdc-tab-link-container {
+    border-bottom-style: none;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none; /* Removes underlines */
+    color: white !important; /* Inherits the color from the parent element */
+    background-color: transparent; /* Ensures no background change on hover */
+    outline: none; /* Removes the outline on focus */
+    
+}

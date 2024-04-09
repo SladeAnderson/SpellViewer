@@ -18,6 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // singleton's
+builder.Services.AddSingleton<IJsonTools, JsonTools>();
 
 //Transient's
 builder.Services.AddTransient<IMasterSpellsRepo, MasterSpellsRepo>();

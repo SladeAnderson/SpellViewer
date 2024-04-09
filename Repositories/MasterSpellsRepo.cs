@@ -37,7 +37,7 @@ namespace SpellViewer.Repositories
         {
             var spellDb = dbContext.Masters_Spells;
 
-            var FoundSpell = await spellDb.FirstOrDefaultAsync(s => s.Name == Name);
+            var FoundSpell = await spellDb.FirstOrDefaultAsync(s => s.Name.ToLower() == Name.ToLower());
             if(FoundSpell == null)
             {
                 return null;

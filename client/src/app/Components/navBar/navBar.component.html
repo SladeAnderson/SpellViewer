@@ -1,0 +1,27 @@
+
+<mat-toolbar>
+    <button mat-fab color="accent" 
+    aria-label="Login" matTooltip="Login">
+        <mat-icon>login</mat-icon>
+    </button>
+
+    <button mat-fab color="accent" 
+    aria-label="Logout" matTooltip="Logout">
+        <mat-icon>logout</mat-icon>
+    </button>
+
+    <button mat-button color="accent"
+    aria-label="Register" matTooltip="Register">
+        Register
+    </button>
+    
+</mat-toolbar>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel" color="accent" class="darkTheme-primary">
+    @for (link of links; track link) {
+        <a mat-tab-link color="accent"
+        [routerLink]="link.path" 
+        (click)="activeLink = link"
+        [active]="activeLink == link"> {{link.name}}</a>
+    }
+</nav>
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>

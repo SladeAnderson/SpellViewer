@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+    
+    html, body { height: 100%; }
+    body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+    
+    :host ::ng-deep .mat-mdc-tab-link-container {
+        border-bottom-style: none;
+        color: white !important;
+    }
+
+    $addPad:10px;
+    @mixin trigger(){
+        font: 1em Roboto;
+    }
+    
+    .darkTheme-primary {
+        background-color: #212121;
+        color: white !important;
+        @include trigger();
+    }
+    .darkTheme-accent {
+        background-color: #69097c;
+        color: white !important;
+        @include trigger();
+    }
+    .darkTheme-hover {
+        .a, a:hover {
+            color: white;
+            font-size: 1.05rem;
+        }
+
+      a:focus {
+            link {
+                background-color: white;
+            }
+        }
+    }
+    .darkTheme-button {
+        color: white;
+        :hover {
+            color: white;
+            // font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
