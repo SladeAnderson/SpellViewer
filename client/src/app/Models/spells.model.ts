@@ -3,6 +3,7 @@ export interface spell {
     Classes:string[],
     components: components,
     description: string,
+    higher_level?: string,
     duration: string,
     level:string,
     name:string,

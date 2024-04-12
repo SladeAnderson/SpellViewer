@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
     
+    @use '@angular/material' as mat;
+    @import url("./app/darktheme.scss");    
+
     html, body { height: 100%; }
-    body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+    body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-x: hidden; }
     
     :host ::ng-deep .mat-mdc-tab-link-container {
         border-bottom-style: none;
@@ -22,6 +25,9 @@
         background-color: #69097c;
         color: white !important;
         @include trigger();
+    }
+    .darkTheme-accent-color{
+        color:#69097c
     }
     .darkTheme-hover {
         .a, a:hover {

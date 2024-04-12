@@ -1,0 +1,85 @@
+<div class="SpellsWrapper pushTop darkTheme-primary">
+    <!-- <div style="display: flex; flex-direction: row; width: auto; height: auto; ">
+
+    </div> -->
+
+    <form style="margin-left: 25%;">
+        <mat-form-field>
+            <mat-label>Filters</mat-label>
+            <input matInput placeholder="Search...">
+        </mat-form-field>
+    </form>
+
+
+    <div class="spellsTable pushTop darkTheme-primary">
+        <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="spellsTable darkTheme-primary" color="accent">
+            <ng-container class="spellsTable darkTheme-primary" matColumnDef="details">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element" class="width100">
+                    <mat-expansion-panel class="width100">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{element.name}}
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ng-template matExpansionPanelContent class="width100" style="float: left; margin-right: 50%;">
+    
+                            <div style="display: flex; flex-direction: column;">
+                                <div> <!-- spell level -->
+                                    level: {{element.level}} 
+                                </div>
+    
+                                <br>
+                                
+                                <div> <!-- spell school -->
+                                    school: {{element.school}} 
+                                </div>
+    
+                                <br>
+    
+                                <div> <!-- spell casting time -->
+                                    casting time: {{element.Casting_Time}} 
+                                </div>
+    
+                                <br>
+    
+                                <div> <!-- spell range --> 
+                                    range: {{element.range}} 
+                                </div>
+                                
+                                <br>
+    
+                                <div> <!-- spell components -->
+                                    components: <ng-container *ngIf="hasMaterial(element)">{{hasMaterial(element)}}</ng-container>
+                                </div>
+                                
+                               <br>
+    
+                               <div> <!-- spell duration -->
+                                    duration: {{element.duration}} 
+                               </div>
+                                
+                               <br>
+                                
+                               <div> <!-- spell classes-->
+                                    classes: {{element.Classes.join(',')}}
+                               </div>
+                                
+        
+                               
+    
+                            </div>
+                            
+                            
+                        </ng-template>
+                    </mat-expansion-panel>
+                </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns" class="darkTheme-primary" color="accent"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="darkTheme-primary" color="accent"></tr>
+        </table>
+    
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="spellsTable darkTheme-primary"></mat-paginator>
+    </div>    
+</div>

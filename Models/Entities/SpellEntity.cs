@@ -14,6 +14,7 @@ namespace SpellViewer.Models.Entities
         public List<SpellClassesEntity> Classes { get; set; } = new();
         public SpellComponentsEntity Components { get; set; } = new();
         public string Description {get; set;} = string.Empty;
+        public string? Higher_levels {get; set;} = string.Empty;
         public string Duration {get; set;} = string.Empty;
         public string Level {get; set;} = string.Empty;
         public string Name {get; set;} = string.Empty;

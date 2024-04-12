@@ -1,0 +1,23 @@
+:host ::ng-deep .mat-expansion-panel {
+    display: inline;
+}
+
+.SpellsWrapper {
+    background-color:  #1d1d1d;
+    height: 90vh; overflow-x: auto;
+    width: 100%;
+}
+
+.spellsTable {
+    margin: 0 auto; // Center the table horizontally
+    max-width: 50vw; // Adjust the maximum width as needed
+    border-radius: 5px;
+}
+
+.pushTop {
+    margin-top: 1em;
+}
+
+.width100{
+    width: 100%;
+}
