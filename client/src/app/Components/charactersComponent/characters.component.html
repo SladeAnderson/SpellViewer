@@ -1,0 +1,18 @@
+<div class="darkTheme-primary fullHeight">
+
+    <div class="charsList">
+        <h2 class="pushLeft">characters</h2>
+        <mat-list>
+            @for (character of characters; track character) {
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <span matListItemTitle>{{character.name}}</span>
+                    <span matListItemLine>{{character.characterClass}}</span>
+                    <span matListItemLine>{{character.race}}</span>
+                </mat-list-item>
+            }
+        </mat-list>
+    </div>
+
+    <button mat-fab color="accent" class="pushBottomLeft"><mat-icon>add</mat-icon></button>
+</div>
