@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
     ]
 })
-export class NameComponent implements OnInit {
+export class registerComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
