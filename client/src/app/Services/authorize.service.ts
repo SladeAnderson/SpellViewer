@@ -1,4 +1,5 @@
 import { HttpClient } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, catchError, map, Observable, of, throwError } from 'rxjs';
 import { shareReplay, switchMap, take, tap, timeout } from 'rxjs/operators';
@@ -9,7 +10,9 @@ export type AuthLevels = "Guest"|"User"|"Admin";
 /**
  *  Service for managing user authentication and authorization
  */
-@Injectable({ providedIn: 'root' })
+@Injectable({ 
+    providedIn: 'root',
+ })
 export class AuthService {
 
     /**

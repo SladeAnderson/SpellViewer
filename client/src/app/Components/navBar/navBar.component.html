@@ -4,16 +4,14 @@
     aria-label="Login" matTooltip="Login">
         <mat-icon>login</mat-icon>
     </button>
-
+    
     <button mat-fab color="accent" 
-    aria-label="Logout" matTooltip="Logout">
-        <mat-icon>logout</mat-icon>
+    aria-label="Logout" matTooltip="Logout"
+    (click)="logout()" *ngIf="isLoggedIn.getValue()">
+    <mat-icon>logout</mat-icon>
     </button>
 
-    <button mat-button color="accent"
-    aria-label="Register" matTooltip="Register">
-        Register
-    </button>
+   <register [isLoggedIn]="isLoggedIn.getValue()"></register>
 
     <h1 class="left30" color="accent">Spell Viewer</h1>
 </mat-toolbar>

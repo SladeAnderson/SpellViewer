@@ -9,6 +9,9 @@ import { MainSpells } from './Components/MainSpellsComponent/MainSpells.componen
 import { dndInfoService } from './Services/dndInfo.service';
 import { JsonTools } from './Tools/JsonTools';
 import { AuthService } from './Services/authorize.service';
+import { registerComponent } from './Components/RegisterComponent/register.component';
+import { registerModal } from './Components/RegisterComponent/registerModal/registerModal.component';
+
 
 @Component({
     selector: 'app-root',
@@ -16,12 +19,13 @@ import { AuthService } from './Services/authorize.service';
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     imports: [RouterOutlet, MatTabsModule, navBar, HttpClientModule],
-    providers: [dndInfoService,JsonTools,AuthService,
+    providers: [dndInfoService,JsonTools,AuthService,registerComponent,registerModal,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: TokenInterceptor,
             multi: true
         }
+        
     ],
     
 
